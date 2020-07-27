@@ -5,7 +5,7 @@ import prettyprinter
 prettyprinter.install_extras(include=['attrs'])
 
 sdk = looker_sdk.init31()
-project = 'jesse_the_look'
+project = 'lal_dev'
 
 def main():
     checkout_dev_branch(sys.argv[1], project)
