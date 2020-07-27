@@ -28,4 +28,4 @@ jobs:
         echo "Installing python modules"
         pipenv install
         echo "Running tests."
-        pipenv run python run_tests.py $GITHUB_REF
+        pipenv run python run_tests.py {{ github.head_ref }}
