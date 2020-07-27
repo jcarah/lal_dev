@@ -8,15 +8,16 @@ sdk = looker_sdk.init31()
 project = 'jesse_the_look'
 
 def main():
-    checkout_dev_branch(sys.argv[1], project)
-    lookml_errors = sdk.validate_project(project_id=project).errors
-    prettyprinter.pprint((lookml_errors))
-    # Assert no new errors introduced in dev branch
-    for error in lookml_errors:
-        assert error.kind != 'error', """
-            Uh oh, there are LookML Validation errors in your branch :-(
-            Please go and fix that before merging your commit
-            """
+    print(sdk.me())
+    # checkout_dev_branch(sys.argv[1], project)
+    # lookml_errors = sdk.validate_project(project_id=project).errors
+    # prettyprinter.pprint((lookml_errors))
+    # # Assert no new errors introduced in dev branch
+    # for error in lookml_errors:
+    #     assert error.kind != 'error', """
+    #         Uh oh, there are LookML Validation errors in your branch :-(
+    #         Please go and fix that before merging your commit
+    #         """
 
 def checkout_dev_branch(branch_name, project_name):
     """Enter dev workspace"""
