@@ -23,6 +23,7 @@ jobs:
         # LOOKERSDK_VERIFY_SSL: ${{ secrets.LOOKERSDK_VERIFY_SSL }}
       run: |
         echo Installing pipenv
+        echo $GITHUB_REF
         curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
         cd .github/actions
         echo "Installing python modules"
