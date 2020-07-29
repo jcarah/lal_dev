@@ -22,8 +22,9 @@ jobs:
         LOOKERSDK_TIMEOUT: 31
         # LOOKERSDK_VERIFY_SSL: ${{ secrets.LOOKERSDK_VERIFY_SSL }}
       run: |
+        echo this is the env $GITHUB_REF
+        echo this is the context ${{ github.head_ref }}
         echo Installing pipenv
-        echo $GITHUB_REF
         curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
         cd .github/actions
         echo "Installing python modules"
