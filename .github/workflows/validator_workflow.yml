@@ -1,8 +1,9 @@
 name: looker tests
 on:
-  push:
+  pull_request:
     branches:
       - master
+
 
 jobs:
   looker_tests:
@@ -22,12 +23,10 @@ jobs:
         LOOKERSDK_TIMEOUT: 31
         # LOOKERSDK_VERIFY_SSL: ${{ secrets.LOOKERSDK_VERIFY_SSL }}
       run: |
-        echo $GITHUB_REF
-        echo ${{ github.head_ref }}
-        # echo Installing pipenv
-        # curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-        # cd .github/actions
-        # echo "Installing python modules"
-        # pipenv install
-        # echo "Running tests."
-        # pipenv run python run_tests.py $GITHUB_REF
+        echo Installing pipenv
+        curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+        cd .github/actions
+        echo "Installing python modules"
+        pipenv install
+        echo "Running tests."
+        pipenv run python run_tests.py ${{ github.head_ref }}
