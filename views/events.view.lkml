@@ -7,7 +7,7 @@ view: events {
     type: number
     sql: ${TABLE}.id ;;
   }
-
+dimension: fake {sql:${fake2}}
 
   dimension_group: created {
     type: time
