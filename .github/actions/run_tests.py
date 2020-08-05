@@ -19,10 +19,10 @@ def main():
             """
 
 def checkout_dev_branch(branch_name, project_name):
-    """Enter dev workspace"""
+    """Enter dev workspace and pull remote"""
     sdk.update_session(models.WriteApiSession(workspace_id='dev'))
     branch = models.WriteGitBranch(name=branch_name)
     sdk.update_git_branch(project_id=project_name, body=branch)
+    sdk.reset_project_to_remote(project_id=project_name)
 
 main()
-
