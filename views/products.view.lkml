@@ -3,7 +3,7 @@ view: products {
   drill_fields: [id]
 
   dimension: id {
-    primary_key: yes
+    primary_key: yest
     type: number
     sql: ${TABLE}.id ;;
   }
