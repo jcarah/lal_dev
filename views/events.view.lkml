@@ -12,7 +12,7 @@ view: events {
   dimension_group: created {
     type: time
     timeframes: [
-      raw,
+      raw,,
       time,
       date,
       week,
