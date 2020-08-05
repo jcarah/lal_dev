@@ -6,3 +6,4 @@ explore: events {
   join: fake_table {}
 
 }
+
