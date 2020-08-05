@@ -7,12 +7,12 @@ view: events {
     type: number
     sql: ${TABLE}.id ;;
   }
-
+dimension: fake {sql:${fake2}}
 
   dimension_group: created {
     type: time
     timeframes: [
-      raw,,
+      raw,
       time,
       date,
       week,
@@ -22,6 +22,7 @@ view: events {
     ]
     sql: ${TABLE}.created_at ;;
   }
+
 
   dimension: type_id {
     type: number
