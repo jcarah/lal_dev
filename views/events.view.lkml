@@ -8,11 +8,12 @@ view: events {
     sql: ${TABLE}.id ;;
   }
 
+# dimension: foo {sql:${bar}}
 
   dimension_group: created {
     type: time
     timeframes: [
-      raw,,
+      raw,
       time,
       date,
       week,
