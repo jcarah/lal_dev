@@ -1,5 +1,5 @@
 view: connection_reg_r3 {
-  sql_table_name: demo_db.connection_reg_r3 ;;
+  sql_table_name: public.connection_reg_r3 ;;
 
   dimension: created_at {
     type: number

@@ -1,5 +1,5 @@
 view: xin_test_for_bug2 {
-  sql_table_name: demo_db.xin_test_for_bug2 ;;
+  sql_table_name: public.xin_test_for_bug2 ;;
   drill_fields: [id]
 
   dimension: id {

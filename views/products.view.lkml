@@ -1,5 +1,5 @@
 view: products {
-  sql_table_name: demo_db.products ;;
+  sql_table_name: public.products ;;
   drill_fields: [id]
 
   dimension: id {
