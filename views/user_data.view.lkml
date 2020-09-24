@@ -1,5 +1,5 @@
 view: user_data {
-  sql_table_name: demo_db.user_data ;;
+  sql_table_name: public.user_data ;;
   drill_fields: [id]
 
   dimension: id {
