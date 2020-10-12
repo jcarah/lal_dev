@@ -1,5 +1,6 @@
 include: "/views/users.view"
 
+
 view: +users {
   dimension: name {
     sql: concat(${first_name}, ' ', ${last_name}) ;;
