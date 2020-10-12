@@ -40,6 +40,16 @@ view: events {
     sql: ${TABLE}.value ;;
   }
 
+  dimension: is_yesterday {
+    type: yesno
+    sql: ${created_date} = date(dateadd(day, -1, current_date)) ;;
+  }
+
+  dimension: is_two_days_ago {
+    type: yesno
+    sql: ${created_date} = date(dateadd(day, -2, current_date)) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id, users.first_name, users.last_name, users.id]
