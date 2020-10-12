@@ -55,3 +55,13 @@ view: events {
     drill_fields: [id, users.first_name, users.last_name, users.id]
   }
 }
+
+view: events_new {
+  extends: [events]
+  measure: count {
+    type: number
+    sql: case when date_part(dow, ${created_date}) = 6
+      then sum(${user_id}) else count(*) end
+    ;;
+  }
+}
