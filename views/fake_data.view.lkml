@@ -13,7 +13,7 @@ view: fake_data {
   dimension: city {}
   measure: value {
     type: sum
-    sql: ${TABLE}.val ;;
+    sql: ${TABLE}.fake_name ;;
   }
 dimension: text{
   sql: 1 ;;
