@@ -5,6 +5,7 @@ import hashlib
 import csv
 import argparse
 import sys
+import pprint
 
 config_file = "looker.ini"
 sdk = looker_sdk.init31(config_file)
@@ -34,7 +35,7 @@ def main():
     outputted to a csv file.
     Use this script to test whether LookML changes
     will result in new broken content."""
-    base_url = get_base_url(config_file)
+    base_url = "https://profservices.dev.looker.com/"
     space_data = get_space_data()
     print("Checking for broken content in production.")
     broken_content_prod = parse_broken_content(
