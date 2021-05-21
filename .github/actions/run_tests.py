@@ -53,6 +53,7 @@ def main():
     )
     new_broken_content = compare_broken_content(broken_content_prod, broken_content_dev)
     if len(new_broken_content) > 0:
+        print("New broken content:")
         pprint(new_broken_content)
         raise Exception(""""
             Uh Oh! Looks like you broke some content. 
