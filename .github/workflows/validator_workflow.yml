@@ -1,10 +1,8 @@
 name: looker tests
 on:
-  pull_request:
+  push: 
     branches:
       - master
-
-
 jobs:
   looker_tests:
     runs-on: ubuntu-latest
@@ -21,6 +19,7 @@ jobs:
         LOOKERSDK_CLIENT_ID: ${{ secrets.LOOKERSDK_CLIENT_ID }}
         LOOKERSDK_CLIENT_SECRET: ${{ secrets.LOOKERSDK_CLIENT_SECRET }}
       run: |
+        echo  ${{ github.head_ref }}
         echo Installing pipenv
         curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
         cd .github/actions
