@@ -52,11 +52,11 @@ def main():
     )
     new_broken_content = compare_broken_content(broken_content_prod, broken_content_dev)
     if len(new_broken_content) > 0:
-        pprint(new_broken_conte)
+        pprint(new_broken_content)
         raise Exception(""""
             Uh Oh! Looks like you broke some content. 
             Please fix and resubmit
-        """
+        """)
     else:
         print("No new broken content in development branch.")
 
