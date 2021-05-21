@@ -5,7 +5,7 @@ import hashlib
 import csv
 import argparse
 import sys
-import pprint
+from pprint import pprint
 
 config_file = "looker.ini"
 sdk = looker_sdk.init31(config_file)
