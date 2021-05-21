@@ -1,3 +1,4 @@
+explore: fake_data {}
 view: fake_data {
   derived_table: {
     sql: select 100::int as val, 'British Columbia'::text as province, 'Vancouver'::text as city
@@ -7,13 +8,13 @@ view: fake_data {
           ;;
   }
   dimension: province {
-    map_layer_name: canadian_provinces
+    # map_layer_name: canadian_provinces
     drill_fields: [city, value, province]
   }
   dimension: city {}
   measure: value {
     type: sum
-    sql: ${TABLE}.val ;;
+    sql: ${TABLE}.fake_name ;;
   }
 dimension: text{
   sql: 1 ;;
