@@ -9,8 +9,8 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 
 # }
 
-explore: events_new {
+# explore: events_new {
 
-}
+# }
 
-explore: users {}
+# explore: users {}
