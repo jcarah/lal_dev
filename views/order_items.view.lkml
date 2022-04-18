@@ -1,3 +1,4 @@
+explore: order_items {}
 view: order_items {
   sql_table_name: public.order_items ;;
   drill_fields: [id]
@@ -37,6 +38,14 @@ view: order_items {
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
+  }
+
+  parameter: unquoted_parameter {
+    type: unquoted
+  }
+
+  dimension: dummy_dim {
+    sql: {{ unquoted_parameter._parameter_value }} ;;
   }
 
   measure: count {
